@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	div{ width:300px; height:300px; background:red; margin:100px auto; transform:perspective(800px) rotateY(-60deg) rotateX(30deg); position:relative;
+	transform-style:preserve-3d; transition:3s;}
+	p{ width:100%; height:100%; background:#F90; position:absolute; transition:3s; font-size:50px; text-align:center; line-height:300px; color:#000;}
+	div:hover .left{ background:green; transform:rotateY(90deg) translateZ(150px);}
+	div:hover .right{ background:pink; transform:rotateY(90deg) translateZ(-150px);}
+	div:hover .top{ background:purple; transform:rotateX(90deg) translateZ(150px);}
+	div:hover .bottom{ background:aqua; transform:rotateX(90deg) translateZ(-150px);}
+	
+	div:hover .front{ transform:translateZ(150px);}
+	div:hover .back{ transform:translateZ(-150px); background:#9F0;}
+	
+	div:hover{ transform:perspective(800px)  rotateY(360deg) rotateX(-360deg);}
+
+   </style>
+</head>
+
+<body>
+	<div>
+    	<p class="front">前面</p>
+        <p class="back">后面 </p>
+        <p class="left">左面</p>
+        <p class="right">右面</p>
+        <p class="top">上面</p>
+        <p class="bottom">下面</p>
+    </div>
+</body>
+</html>
